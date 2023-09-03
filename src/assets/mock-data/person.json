@@ -1,0 +1,64 @@
+{
+    "companies": [
+        {
+            "id": 1,
+            "name": "John Clemente",
+            "yoe": "< 5 years",
+            "designation": "Data Analyst",
+            "url": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
+            "city": "Sayreville",
+            "state": "NJ",
+            "companyAlias": "ESPN",
+            "companyId": "3",
+            "email": "john.clemente@gmail.com",
+            "linkedin": "linkedin.com/in/john-clemente",
+            "contact": "(432) 330-0113",
+            "pronouns": "he/him/his"
+        },
+        {
+            "id": 2,
+            "name": "Lorriane Monterosa",
+            "yoe": "5 - 10 years",
+            "designation": "Construction Manager",
+            "url": "https://xsgames.co/randomusers/assets/avatars/female/45.jpg",
+            "city": "Atlanta",
+            "state": "GA",
+            "companyAlias": "ESPN",
+            "companyId": "3",
+            "email": "lorriane.monterosa@gmail.com",
+            "linkedin": "linkedin.com/in/lorriane-monterosa",
+            "contact": "(234) 122-4822",
+            "pronouns": "she/her/hers"
+        },
+        {
+            "id": 3,
+            "name": "Quinn Jannelli",
+            "yoe": "10 - 20 years",
+            "designation": "Product Owner",
+            "url": "https://xsgames.co/randomusers/assets/avatars/female/63.jpg",
+            "city": "Austin",
+            "state": "TX",
+            "companyAlias": "ESPN",
+            "companyId": "3",
+            "email": "quinn.jannelli@yahoo.com",
+            "linkedin": "linkedin.com/in/quinn-jannelli",
+            "contact": "(309) 442-0922",
+            "pronouns": "he/him/his"
+        },
+        {
+            "id": 4,
+            "name": "Bryce Ralya",
+            "yoe": "> 20 years",
+            "designation": "Investment Banker",
+            "url": "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
+            "city": "Austin",
+            "state": "TX",
+            "companyAlias": "ESPN",
+            "companyId": "3",
+            "email": "bryce.ralya@outlook.com",
+            "linkedin": "linkedin.com/in/bryce-ralya",
+            "contact": "(323) 483-0229",
+            "pronouns": "she/her/hers"
+        }
+    ]
+}

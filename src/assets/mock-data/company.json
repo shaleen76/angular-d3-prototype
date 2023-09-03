@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "American Express",
+        "year": 1850,
+        "month": "March",
+        "url": "https://logo.clearbit.com/americanexpress.com",
+        "city": "New York",
+        "state": "NY",
+        "industry": [
+            "Finance"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Hub Spot",
+        "year": 2006,
+        "month": "June",
+        "url": "https://logo.clearbit.com/hubspot.com",
+        "city": "Cambridge",
+        "state": "MA",
+        "industry": [
+            "Sales"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "ESPN",
+        "year": 1979,
+        "month": "September",
+        "url": "https://logo.clearbit.com/espn.com",
+        "city": "Bristol",
+        "state": "CT",
+        "industry": [
+            "Sports",
+            "Media"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Google",
+        "year": 1998,
+        "month": "September",
+        "url": "https://logo.clearbit.com/google.com",
+        "city": "Mountain View",
+        "state": "CA",
+        "industry": [
+            "Technology",
+            "Internet"
+        ]
+    }
+]

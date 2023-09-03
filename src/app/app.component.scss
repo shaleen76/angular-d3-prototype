@@ -1,0 +1,28 @@
+/* container */
+.columns-3 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* columns */
+.columns-3>* {
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+}
+
+.box {
+    display: flex;
+    min-height: min-content; /* needs vendor prefixes */
+}
+
+@media (min-width: 992px) {
+    .columns-3>* {
+        width: calc(100% / 3);
+    }
+}
