@@ -4,12 +4,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
+import { NgIconsModule } from '@ng-icons/core';
+import { heroBriefcase } from '@ng-icons/heroicons/outline';
 import { MatIconModule } from '@angular/material/icon'
-import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
@@ -27,12 +29,13 @@ import { ConnectionGraphComponent } from './connection-graph/connection-graph.co
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    NgIconsModule.withIcons({ heroBriefcase }),
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
+    MatTooltipModule,
     MatButtonModule,
     MatGridListModule,
-    ScrollingModule,
     MatListModule,
     MatProgressSpinnerModule,
     MatDividerModule

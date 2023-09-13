@@ -1,52 +1,206 @@
-[
-    {
-        "id": 1,
-        "name": "American Express",
-        "year": 1850,
-        "month": "March",
-        "url": "https://logo.clearbit.com/americanexpress.com",
-        "city": "New York",
-        "state": "NY",
-        "industry": [
-            "Finance"
-        ]
+{
+    "statement_id": "01ee4ea0-1395-17c1-b8e4-86370bda4f64",
+    "status": {
+        "state": "SUCCEEDED"
     },
-    {
-        "id": 2,
-        "name": "Hub Spot",
-        "year": 2006,
-        "month": "June",
-        "url": "https://logo.clearbit.com/hubspot.com",
-        "city": "Cambridge",
-        "state": "MA",
-        "industry": [
-            "Sales"
-        ]
+    "manifest": {
+        "format": "JSON_ARRAY",
+        "schema": {
+            "column_count": 9,
+            "columns": [
+                {
+                    "name": "org_uuid",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 0
+                },
+                {
+                    "name": "c_name",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 1
+                },
+                {
+                    "name": "ai_wt",
+                    "type_text": "DOUBLE",
+                    "type_name": "DOUBLE",
+                    "position": 2
+                },
+                {
+                    "name": "ui_categories",
+                    "type_text": "ARRAY<STRING>",
+                    "type_name": "ARRAY",
+                    "position": 3
+                },
+                {
+                    "name": "revenue_range_value",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 4
+                },
+                {
+                    "name": "website_url",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 5
+                },
+                {
+                    "name": "num_employees_enum",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 6
+                },
+                {
+                    "name": "ui_location",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 7
+                },
+                {
+                    "name": "funding_date_stage",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 8
+                }
+            ]
+        },
+        "total_chunk_count": 1,
+        "chunks": [
+            {
+                "chunk_index": 0,
+                "row_offset": 0,
+                "row_count": 11
+            }
+        ],
+        "total_row_count": 11,
+        "truncated": false
     },
-    {
-        "id": 3,
-        "name": "ESPN",
-        "year": 1979,
-        "month": "September",
-        "url": "https://logo.clearbit.com/espn.com",
-        "city": "Bristol",
-        "state": "CT",
-        "industry": [
-            "Sports",
-            "Media"
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Google",
-        "year": 1998,
-        "month": "September",
-        "url": "https://logo.clearbit.com/google.com",
-        "city": "Mountain View",
-        "state": "CA",
-        "industry": [
-            "Technology",
-            "Internet"
+    "result": {
+        "chunk_index": 0,
+        "row_offset": 0,
+        "row_count": 11,
+        "data_array": [
+            [
+                "df8264aa-292d-47c7-e834-c9b7edf105d1",
+                "CoverMyMeds",
+                "24.0",
+                ["Health Care","Information Technology","Software"],
+                "500M",
+                "http://www.covermymeds.com",
+                "5000",
+                "Ohio, USA",
+                "November 5, 2014"
+            ],
+            [
+                "91bf4df5-463c-4f1f-9434-201346d8cacd",
+                "equipifi",
+                "20.0",
+                ["Finance","Financial Services","FinTech","Mobile Payments","SaaS","Software"],
+                null,
+                "http://www.equipifi.com/",
+                "50",
+                "Arizona, USA",
+                null
+            ],
+            [
+                "ea3b5e36-a06f-43ae-8d59-4b38d5a8b40d",
+                "Stride Funding",
+                "24.0",
+                ["Education","Financial Services"],
+                "10M",
+                "https://www.stridefunding.com/",
+                "10",
+                "Massachusetts, USA",
+                "March 30, 2022"
+            ],
+            [
+                "e65c3885-7964-a17a-eb1b-a2055c88f4e2",
+                "n2y",
+                "26.0",
+                ["Education","Higher Education","Tutoring"],
+                "10M",
+                "https://www.n2y.com/",
+                "250",
+                "Ohio, USA",
+                "November 19, 2019"
+            ],
+            [
+                "a2f4bb5f-f699-539f-11d5-b9d4f2f80bfb",
+                "Paycor",
+                "22.0",
+                ["Employment","Human Resources","SaaS","Software"],
+                "500M",
+                "http://www.paycor.com",
+                "5000",
+                "Ohio, USA",
+                "January 4, 2021"
+            ],
+            [
+                "172c7ad5-7cf1-42a3-b893-460eb7f76c1d",
+                "AURP",
+                "18.0",
+                ["Innovation Management","Non Profit","Universities"],
+                null,
+                "https://www.aurp.net/",
+                "10",
+                "Arizona, USA",
+                null
+            ],
+            [
+                "86da6213-5b43-6419-4047-472102ccf66f",
+                "LinkedIn",
+                "14.0",
+                ["Professional Networking","Recruiting","Social Media","Social Recruiting"],
+                "10B",
+                "http://linkedin.com",
+                null,
+                "California, USA",
+                "February 15, 2016"
+            ],
+            [
+                "020b85ae-d7d2-8d9f-3c57-84f3c8e7d9cc",
+                "Better.com",
+                "20.0",
+                ["Consumer Lending","FinTech","Lending","Real Estate"],
+                "50M",
+                "https://better.com",
+                "10000",
+                "New York, USA",
+                "April 8, 2021"
+            ],
+            [
+                "c1dc5262-4c95-4b1d-a088-4686a153f5b1",
+                "battleface",
+                "22.0",
+                ["Big Data","Embedded Software","Insurance","InsurTech","Mobile Apps","Predictive Analytics","Travel"],
+                "10M",
+                "https://www.battleface.com",
+                "100",
+                "Ohio, USA",
+                null
+            ],
+            [
+                "6acfa7da-1dbd-936e-d985-cf07a1b27711",
+                "Google",
+                "16.0",
+                ["Advertising","Collaboration","Enterprise Software","Information Technology","Search Engine"],
+                "10B+",
+                "https://www.google.com",
+                null,
+                "California, USA",
+                "May 29, 2023"
+            ],
+            [
+                "6861db1b-f498-4936-701b-9aa4bc65809e",
+                "ZoomInfo",
+                "16.0",
+                ["Analytics","Information Services","Lead Generation","Marketing"],
+                "500M",
+                "http://www.zoominfo.com",
+                "5000",
+                "Washington, USA",
+                "May 1, 2014"
+            ]
         ]
     }
-]
+}

@@ -12,7 +12,9 @@ export class CompanyService {
 
     constructor(private http: HttpClient) { }
 
-    getCompanies(): Observable<Company[]> {
-        return this.http.get<Company[]>('../../../assets/mock-data/company.json');
+    public companies: Company[] = new Array<Company>;
+
+    getCompanies() {
+        return this.http.get('../../../assets/mock-data/company.json');
     }
 }

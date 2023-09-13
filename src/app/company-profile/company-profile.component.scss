@@ -1,8 +1,3 @@
-.content {
-    height: calc(100vh - 64px);
-    overflow: auto;
-}
-
 .spinner-item {
     display: grid;
     place-items: center;
@@ -13,4 +8,90 @@
     position: absolute;
     margin-top: 5px;
     margin-left: 5px; /* optional */
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.leftRs {
+    position: relative;
+    margin: auto;
+    font-size: 40px;
+    border: none;
+    background-color: white;
+    left: 150px;
+    
+}
+.text-oneline ::ng-deep * {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+}
+
+::ng-deep .tooltip { white-space: pre-line;}
+
+.text-oneline {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+.rightRs {
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    right: 0;
+    left: 150px;
+}
+
+.rightRsCircle {
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    right: 0;
+    left: 120px;
+}
+
+.numberCircle {
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+    object-fit: cover;
+    text-align: center;
+    font-size: 12px;
+    border: 2px solid #666;
+    //background-color: red;
+}
+
+.company-card {
+    border: 1px solid gray; margin: 10px;
+    :hover {
+        cursor: pointer;
+    }
+}
+
+mat-card {
+    
 }

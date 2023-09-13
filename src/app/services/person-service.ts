@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Person } from '../models/person';
  
 @Injectable({
  providedIn: 'root'
@@ -9,9 +10,10 @@ import { Observable } from 'rxjs';
 export class PersonService {
  
  constructor(private http: HttpClient) { }
- 
- getPersons(): Observable<any> {
-    console.log('ppp');
-   return this.http.get('../../../assets/mock-data/person.json');
- }
+
+ public persons: Person[] = new Array<Person>;
+
+  getPersons() {
+      return this.http.get('../../../assets/mock-data/person.json');
+  }
 }

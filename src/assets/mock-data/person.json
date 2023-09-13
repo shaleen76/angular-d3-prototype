@@ -1,64 +1,171 @@
 {
-    "companies": [
-        {
-            "id": 1,
-            "name": "John Clemente",
-            "yoe": "< 5 years",
-            "designation": "Data Analyst",
-            "url": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-            "city": "Sayreville",
-            "state": "NJ",
-            "companyAlias": "ESPN",
-            "companyId": "3",
-            "email": "john.clemente@gmail.com",
-            "linkedin": "linkedin.com/in/john-clemente",
-            "contact": "(432) 330-0113",
-            "pronouns": "he/him/his"
+    "statement_id": "01ee4ea3-97c5-1fde-b8c9-e75b41033eb3",
+    "status": {
+        "state": "SUCCEEDED"
+    },
+    "manifest": {
+        "format": "JSON_ARRAY",
+        "schema": {
+            "column_count": 6,
+            "columns": [
+                {
+                    "name": "p_uuid",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 0
+                },
+                {
+                    "name": "p_name",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 1
+                },
+                {
+                    "name": "Organization",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 2
+                },
+                {
+                    "name": "primary_job_title",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 3
+                },
+                {
+                    "name": "linkedin",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 4
+                },
+                {
+                    "name": "ui_location",
+                    "type_text": "STRING",
+                    "type_name": "STRING",
+                    "position": 5
+                }
+            ]
         },
-        {
-            "id": 2,
-            "name": "Lorriane Monterosa",
-            "yoe": "5 - 10 years",
-            "designation": "Construction Manager",
-            "url": "https://xsgames.co/randomusers/assets/avatars/female/45.jpg",
-            "city": "Atlanta",
-            "state": "GA",
-            "companyAlias": "ESPN",
-            "companyId": "3",
-            "email": "lorriane.monterosa@gmail.com",
-            "linkedin": "linkedin.com/in/lorriane-monterosa",
-            "contact": "(234) 122-4822",
-            "pronouns": "she/her/hers"
-        },
-        {
-            "id": 3,
-            "name": "Quinn Jannelli",
-            "yoe": "10 - 20 years",
-            "designation": "Product Owner",
-            "url": "https://xsgames.co/randomusers/assets/avatars/female/63.jpg",
-            "city": "Austin",
-            "state": "TX",
-            "companyAlias": "ESPN",
-            "companyId": "3",
-            "email": "quinn.jannelli@yahoo.com",
-            "linkedin": "linkedin.com/in/quinn-jannelli",
-            "contact": "(309) 442-0922",
-            "pronouns": "he/him/his"
-        },
-        {
-            "id": 4,
-            "name": "Bryce Ralya",
-            "yoe": "> 20 years",
-            "designation": "Investment Banker",
-            "url": "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
-            "city": "Austin",
-            "state": "TX",
-            "companyAlias": "ESPN",
-            "companyId": "3",
-            "email": "bryce.ralya@outlook.com",
-            "linkedin": "linkedin.com/in/bryce-ralya",
-            "contact": "(323) 483-0229",
-            "pronouns": "she/her/hers"
-        }
-    ]
+        "total_chunk_count": 1,
+        "chunks": [
+            {
+                "chunk_index": 0,
+                "row_offset": 0,
+                "row_count": 13
+            }
+        ],
+        "total_row_count": 13,
+        "truncated": false
+    },
+    "result": {
+        "chunk_index": 0,
+        "row_offset": 0,
+        "row_count": 13,
+        "data_array": [
+            [
+                "26b7b688-1e49-ba53-5df3-eea932958f57",
+                "Tess Michaels",
+                "Stride Funding",
+                "Founder & CEO",
+                "https://www.linkedin.com/in/tessmichaels",
+                "California, USA"
+            ],
+            [
+                "27f82ae7-019d-4905-a889-4ef4c40d4949",
+                "Chris Hays",
+                "ZoomInfo",
+                "President & Chief Operating Officer",
+                "https://www.linkedin.com/in/chrishays1/",
+                "Washington, USA"
+            ],
+            [
+                "4fd3d006-134e-4d16-a926-5d42b8c7c992",
+                "Sasha Gainullin",
+                "battleface",
+                "CEO",
+                "https://www.linkedin.com/in/sashagainullin/",
+                "Ohio, USA"
+            ],
+            [
+                "5e7f0372-5390-f628-c444-9dac9241b61d",
+                "Erica Conroy",
+                "CoverMyMeds",
+                "Vice President and GM, Specialty Business",
+                "https://www.linkedin.com/in/erica-conroy-ph-d-119a106/",
+                "Ohio, USA"
+            ],
+            [
+                "66ccd2fa-3c53-39b2-dcd3-5c595f95a264",
+                "Matt Scantland",
+                "CoverMyMeds",
+                "Co-Founder & Chief Executive Officer",
+                "https://www.linkedin.com/in/mattscantland/",
+                "Ohio, USA"
+            ],
+            [
+                "6a61fb40-c792-45a6-998d-2588d8c832e9",
+                "Raul Villar",
+                "Paycor",
+                "Chief Executive Officer",
+                "https://www.linkedin.com/in/raulvillar/",
+                "Utah, USA"
+            ],
+            [
+                "710cde7f-ae61-4694-99dd-93e9b785ca64",
+                "Vickie Palmer",
+                "AURP",
+                "Chief Executive Officer",
+                "https://www.linkedin.com/in/vickie-palmer-4b00199",
+                "Arizona, USA"
+            ],
+            [
+                "868ba8dd-d47c-43c8-85fc-05bd3d7e48c5",
+                "Bryce Deeney",
+                "equipifi",
+                "Chief Executive Officer, Board Member",
+                "https://www.linkedin.com/in/bryce-deeney-112b5839/",
+                "Arizona, USA"
+            ],
+            [
+                "8863b0e0-36e6-abb4-94d7-1cdfd60b202a",
+                "Chrissy Hand",
+                "CoverMyMeds",
+                "SVP, Operations",
+                "https://www.linkedin.com/in/chrissyneubauer/",
+                "Ohio, USA"
+            ],
+            [
+                "930ba46d-d5d6-93f4-46b1-699ffdb47d3b",
+                "Vishal Garg",
+                "Better.com",
+                "Founder & CEO",
+                "https://www.linkedin.com/in/vishalgargbetter",
+                "New York, USA"
+            ],
+            [
+                "9e6e50e3-c3f4-6d1e-48f0-61bef10e48b2",
+                "Nigel Walsh",
+                "Google",
+                "Managing Director, Insurance",
+                "http://www.linkedin.com/in/nigelwalsh",
+                "England,United Kingdom"
+            ],
+            [
+                "e947e273-b41b-664b-a65d-a097d6ada4a8",
+                "Purna Virji",
+                "LinkedIn",
+                "Senior Content Marketing Evangelist (Content Solutions Consultant)",
+                "https://www.linkedin.com/in/purnavirji",
+                "Pennsylvania, USA"
+            ],
+            [
+                "fc675397-3597-9eed-7336-270351c0195f",
+                "Ed Holmes",
+                "n2y",
+                "CEO",
+                "https://www.linkedin.com/in/edholmes/",
+                "Georgia, USA"
+            ]
+        ]
+    }
 }

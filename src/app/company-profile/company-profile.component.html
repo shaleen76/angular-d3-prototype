@@ -1,22 +1,31 @@
-<div style="display: flex; flex-direction: column; align-items: left; justify-content: center;  margin: 10px; overflow: auto;">
-    <mat-card style="width:300px; border: 1px solid gray; margin: 5px" (click)="showPersonProfile()" *ngFor="let company of companies">
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px" style="align-items: left; justify-content: center;" fxFlexAlign="stretch">
+    <button class="leftRs" [disabled]="leftActive" (click)="viewPrevCards()">&#9650;</button>
+    <mat-card class="company-card" (click)="showPersonProfile()" *ngFor="let company of viewCompanies;">
         <mat-card-header>
-            <img [src]="company.url" mat-card-avatar />
-            <mat-card-title>{{company.name}}</mat-card-title>
-            <mat-card-subtitle><span >{{company.city}}, {{company.state}}</span></mat-card-subtitle>
-            <mat-card-subtitle><span >Est. {{company.month}}, {{company.year}}</span></mat-card-subtitle>
+            <div class="numberCircle" mat-card-avatar>{{company.score}}</div>
+            <mat-card-title  class="text-oneline">{{company.name}}</mat-card-title>
+            <mat-card-subtitle><span >{{company.website}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span >•&nbsp;{{company.location}}</span><span *ngIf="company?.revenue != null" >   •&nbsp;Revenue: {{company.revenue}}</span></mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content style="margin-top:15px;">
-            <div style="padding-left: 50px">
-                <mat-icon aria-hidden="false" aria-label="group" fontIcon="group"></mat-icon>
-                <span class="aligned-with-icon">Employees: {{company.year}}</span>
+        <mat-card-content>
+            <div style="padding-left: 60px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px">
+                <div>
+                    <mat-icon aria-hidden="false" aria-label="group" fontIcon="group"></mat-icon>
+                    <span class="aligned-with-icon">Employees: {{company?.totalEmployees}}</span>
+                </div>
+                <div style="padding-bottom: 10px;">
+                    <mat-icon aria-hidden="false" aria-label="business" fontIcon="business"></mat-icon>
+                    <a class="aligned-with-icon">
+                        <span *ngIf="company?.firstIndustry != ''" matTooltip={{company?.firstIndustry}} matTooltipPosition="above">{{company?.firstIndustry}}</span>
+                        <span *ngIf="company?.remainingIndustry != ''" matTooltipClass="tooltip" matTooltip="{{company?.remainingIndustryTooltip}}" matTooltipPosition="above">{{company?.remainingIndustry}}</span>
+                    </a>
+                </div>
+                <div>
+                    <mat-icon *ngIf="company?.fundingDateStage != null" aria-hidden="false" aria-label="date_range" fontIcon="date_range"></mat-icon>
+                    <span *ngIf="company?.fundingDateStage != null" class="aligned-with-icon">{{company?.fundingDateStage}}</span>
+                </div>
             </div>
-            <div style="padding-left: 50px">
-                <mat-icon aria-hidden="false" aria-label="group" fontIcon="group"></mat-icon>
-                <span class="aligned-with-icon">Employees: {{company.year}}</span>
-            </div>
-            
         </mat-card-content>
-        <mat-divider></mat-divider>
     </mat-card>
+    <button class="leftRs" [disabled]="rightActive" (click)="viewNextCards()">&#9660;</button>
 </div>
