@@ -13,6 +13,23 @@
     }
 }
 
+.numberCircle {
+    width: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #666;
+    //background-color: red;
+}
+
+.active-person {
+    background-color: lightgrey;
+}
+
 .leftRs {
     position: relative;
     margin: auto;
@@ -81,3 +98,7 @@ img.linkedin:hover {
     cursor: pointer;
 }
 
+mat-card {
+    width: 400px;
+    height: 200px;
+}

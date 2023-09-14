@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px" style="align-items: left; justify-content: center;" fxFlexAlign="stretch">
     <button class="leftRs" [disabled]="leftActive" (click)="viewPrevCards()">&#9650;</button>
-    <mat-card class="company-card" (click)="showPersonProfile()" *ngFor="let company of viewCompanies;">
+    <mat-card class="company-card" (click)="showPersonProfile(company)" *ngFor="let company of viewCompanies;" [class.active-company]="company?.index === selectedIndex">
         <mat-card-header>
             <div class="numberCircle" mat-card-avatar>{{company.score}}</div>
             <mat-card-title  class="text-oneline">{{company.name}}</mat-card-title>

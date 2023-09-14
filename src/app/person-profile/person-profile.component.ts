@@ -1,42 +1,42 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, OnDestroy } from '@angular/core';
 import { Person } from '../models/person';
 import { PersonService } from '../services/person-service';
 import { AppService } from '../app.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-person-profile',
   templateUrl: './person-profile.component.html',
   styleUrls: ['./person-profile.component.scss']
 })
-export class PersonProfileComponent {
+export class PersonProfileComponent implements OnDestroy {
   persons = new Array<Person>;
   viewPersons = new Array<Person>;
   leftPersonActive: boolean = true;
   rightPersonActive: boolean = true;
   index: number = 0;
+  selectedCompany: string = '';
+  _subsc: Subscription;
+  rgx = new RegExp(/(\p{L}{1})\p{L}+/, 'gu');
+  selectedPersonIndex: number = -1;
 
   constructor(private personService: PersonService, private appService: AppService, private ngZone: NgZone) { }
 
   ngOnInit(): void {
-    this.personService.getPersons().subscribe((data: any) => {
-      data?.result?.data_array.forEach((element: any, index: any) => {
-        this.persons.push({
-          index,
-          id: element[0],
-          name: element[1],
-          company: element[2],
-          designation: element[3],
-          linkedin: element[4],
-          location: element[5]
-        });
-      })
+    this.fetchData();
+  }
+
+  fetchData() {
+    this._subsc = this.appService.selectedPersonForCompany.subscribe(viewPersons => this.viewPersons = viewPersons);
+    if (this.viewPersons.length > 0) {
       this.viewPersons = this.persons.slice(0, 4);
       this.index = this.viewPersons.length - 1;
       this.rightPersonActive = this.persons.length > 4 ? false : true;
-    });
+    }
   }
 
-  showConnections() {
+  showConnections(selectedPerson: Person) {
+    this.selectedPersonIndex = selectedPerson.index;
     this.appService.setConnectionComponent(true);
   }
 
@@ -71,5 +71,9 @@ export class PersonProfileComponent {
     } else {
       this.leftPersonActive = true;
     }
+  }
+
+  ngOnDestroy(): void {
+    this._subsc.unsubscribe();
   }
 }
