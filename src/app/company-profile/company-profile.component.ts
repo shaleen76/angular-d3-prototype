@@ -19,11 +19,14 @@ export class CompanyProfileComponent {
   leftActive: boolean = true;
   rightActive: boolean = true;
   index: number = 0;
+  selectedIndex: number = -1;
 
   constructor(private companyService: CompanyService, private appService: AppService, private ngZone: NgZone) { }
 
-  showPersonProfile() {
+  showPersonProfile(selectedCompany: Company) {
+    this.selectedIndex = selectedCompany.index;
     this.appService.setPersonComponent();
+    this.appService.setActiveCompany(selectedCompany.name != null ? selectedCompany.name : '');
     this.appService.setConnectionComponent(false);
   }
 

@@ -7,4 +7,5 @@ export class Person {
     designation?: string | null;
     linkedin?: string | null;
     location?: string | null;
+    titleCase?: string | null;
 }
