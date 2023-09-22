@@ -1,28 +1,39 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AppService } from './app.service';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
+import { authConfig } from './sso.config';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent {
 
-  viewPerson: boolean = false;
-  viewConnection: boolean = false;
-  _sub: Subscription;
-  _subs: Subscription;
+  isAuthenticated$: Observable<boolean>;
+  isDoneLoading$: Observable<boolean>;
+  canActivateProtectedRoutes$: Observable<boolean>;
+  public isAuthenticated = false;
 
-  constructor(private appService: AppService) {}
-  
-  ngOnInit(){
-    this._sub = this.appService.showPersonComponent.subscribe(showPersonState => this.viewPerson = showPersonState);
-    this._subs = this.appService.showConnectionComponent.subscribe(showConnectionState => this.viewConnection = showConnectionState);
+
+  constructor(private authService: AuthService) {
+    this.authService.authenticationEventObservable.subscribe((event) => {
+      this.isAuthenticated = event;
+    });
   }
 
-  ngOnDestroy(): void {
-    this._sub.unsubscribe();
-    this._subs.unsubscribe()
-}
+  login() { this.authService.login(); }
+  logout() { this.authService.logout(); }
+  // refresh() { this.authService.refresh(); }
+  reload() { window.location.reload(); }
+  clearStorage() { localStorage.clear(); }
+  // logoutExternally() {
+  //   window.open(this.authService.logoutUrl);
+  // }
+  // get hasValidToken() { return this.authService.hasValidToken(); }
+  // get accessToken() { return this.authService.accessToken; }
+  // get refreshToken() { return this.authService.refreshToken; }
+  // get identityClaims() { return this.authService.identityClaims; }
+  // get idToken() { return this.authService.idToken; }
 }

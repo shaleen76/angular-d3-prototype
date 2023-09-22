@@ -3,6 +3,7 @@ import { Person } from '../models/person';
 import { PersonService } from '../services/person-service';
 import { AppService } from '../app.service';
 import { Subscription } from 'rxjs';
+import { DashboardService } from '../services/dashboard-service';
 
 @Component({
   selector: 'app-person-profile',
@@ -20,14 +21,17 @@ export class PersonProfileComponent implements OnDestroy {
   rgx = new RegExp(/(\p{L}{1})\p{L}+/, 'gu');
   selectedPersonIndex: number = -1;
 
-  constructor(private personService: PersonService, private appService: AppService, private ngZone: NgZone) { }
+  constructor(private personService: PersonService, private dashboardService: DashboardService, private ngZone: NgZone) { }
 
   ngOnInit(): void {
     this.fetchData();
   }
 
   fetchData() {
-    this._subsc = this.appService.selectedPersonForCompany.subscribe(viewPersons => this.viewPersons = viewPersons);
+    this._subsc = this.dashboardService.selectedPersonForCompany.subscribe(viewPersons => {
+      this.viewPersons = viewPersons;
+      this.selectedPersonIndex = -1;
+    });
     if (this.viewPersons.length > 0) {
       this.viewPersons = this.persons.slice(0, 4);
       this.index = this.viewPersons.length - 1;
@@ -37,7 +41,8 @@ export class PersonProfileComponent implements OnDestroy {
 
   showConnections(selectedPerson: Person) {
     this.selectedPersonIndex = selectedPerson.index;
-    this.appService.setConnectionComponent(true);
+    this.dashboardService.setSelectedPerson(selectedPerson);
+    this.dashboardService.setConnectionComponent(true);
   }
 
   viewNextPersonCards() {

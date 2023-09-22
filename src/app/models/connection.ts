@@ -1,9 +1,8 @@
-import { Node } from "./node";
-import { Link } from "./link";
+import { PersonNode } from "./personNode";
+import { PersonLink } from "./personLink";
 
 export class Connection {
     constructor() {}
-    nodes: Array<Node>;
-    edges: Array<Link>;
-
+    nodes: Array<PersonNode> = new Array<PersonNode>;
+    edges: Array<PersonLink> = new Array<PersonLink>;
 }

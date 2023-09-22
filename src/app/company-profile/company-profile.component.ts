@@ -3,6 +3,8 @@ import { Output, EventEmitter } from '@angular/core';
 import { CompanyService } from '../services/company-service';
 import { Company } from '../models/company';
 import { AppService } from '../app.service';
+import { Person } from '../models/person';
+import { DashboardService } from '../services/dashboard-service';
 
 @Component({
   selector: 'app-company-profile',
@@ -21,13 +23,14 @@ export class CompanyProfileComponent {
   index: number = 0;
   selectedIndex: number = -1;
 
-  constructor(private companyService: CompanyService, private appService: AppService, private ngZone: NgZone) { }
+  constructor(private companyService: CompanyService, private dashboardService: DashboardService, private ngZone: NgZone) { }
 
   showPersonProfile(selectedCompany: Company) {
     this.selectedIndex = selectedCompany.index;
-    this.appService.setPersonComponent();
-    this.appService.setActiveCompany(selectedCompany.name != null ? selectedCompany.name : '');
-    this.appService.setConnectionComponent(false);
+    this.dashboardService.setPersonComponent();
+    this.dashboardService.setActiveCompany(selectedCompany.name != null ? selectedCompany.name : '');
+    this.dashboardService.setConnectionComponent(false);
+    this.dashboardService.setSelectedPerson(new Person());
   }
 
   ngOnInit(): void {

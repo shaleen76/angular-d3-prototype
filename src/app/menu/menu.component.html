@@ -1,0 +1,44 @@
+<div class="container">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+        <span>
+          <button style="color: white" mat-button routerLink="/"><mat-icon>home</mat-icon></button>
+        </span>
+        <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+          <button mat-button style="color: white" (click)="login()" *ngIf="!isAuthenticated">
+            <mat-icon>power_settings_new</mat-icon>
+            Login
+          </button>
+          <button style="color: white" mat-button *ngIf="isAuthenticated" (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Logout
+          </button>
+          <button style="color: white" mat-button routerLink="/aidev">
+            <mat-icon>gamepad</mat-icon>
+            AI Dev
+          </button>
+        </div>
+        <button mat-button style="color: white" [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <mat-menu  x-position="before" #menu="matMenu">
+        <button mat-menu-item routerLink="/">
+          <mat-icon>home</mat-icon>
+          <span style="color: black;">Home</span>
+        </button>
+        <button mat-menu-item routerLink="/game">
+          <mat-icon>gamepad</mat-icon>
+          <span style="color: black;">AI Dev</span>
+        </button>
+        <button mat-menu-item>
+            <span style="color: black;" *ngIf="!isAuthenticated">Login</span>
+          <mat-icon>power_settings_new</mat-icon>
+          Login
+        </button>
+        <button mat-menu-item *ngIf="isAuthenticated" (click)="logout()">
+            <span style="color: black;">Logout</span>
+          <mat-icon>exit_to_app</mat-icon>
+          Logout
+        </button>
+      </mat-menu>
+</div>

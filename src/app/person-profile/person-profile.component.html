@@ -1,26 +1,31 @@
-<div fxLayout="column" style="align-items: left; justify-content: center;" fxFlexAlign="stretch">
-    <button class="leftRs" *ngIf="viewPersons.length > 3" [disabled]="leftPersonActive" (click)="viewPreviousPersonCards()">&#9650;</button>
-    <mat-card class="person-card" (click)="showConnections(person)" *ngFor="let person of viewPersons;" [class.active-person]="person?.index === selectedPersonIndex">
-        <mat-card-header>
-            <div class="numberCircle" mat-card-avatar>{{person.titleCase}}</div>
-            <!-- <img class="linkedin" matTooltip={{person?.linkedin}} matTooltipPosition="above" mat-card-avatar src="https://logo.clearbit.com/linkedin.com" /> -->
-            <!-- <div class="numberCircle" mat-card-avatar>{{company.score}}</div> -->
-            <mat-card-title  class="text-oneline">{{person.name}}</mat-card-title>
-            <mat-card-subtitle><span >{{person?.designation}}</span></mat-card-subtitle>
-            <mat-card-subtitle><span >{{person?.location}}</span></mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            <div style="padding-left: 60px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px">
-                <div *ngIf="person?.company != null">
-                    <mat-icon aria-hidden="false" aria-label="business" fontIcon="business"></mat-icon>
-                    <span class="aligned-with-icon">{{person?.company}}</span>
-                </div>
-                <!-- <div *ngIf="person?.linkedin != null">
+<div style="display: flex; align-items: center; flex-direction: column">
+    <div style="font-weight: bold; font-size: 20px; margin-bottom: 10px;">AI Decisionmakers</div>
+    <button class="leftRs" [disabled]="leftPersonActive" (click)="viewPreviousPersonCards()">&#9650;</button>
+</div>
+
+<mat-card class="person-card" (click)="showConnections(person)" *ngFor="let person of viewPersons;"
+    [class.active-person]="person?.index === selectedPersonIndex">
+    <mat-card-header>
+        <div class="numberCircle" mat-card-avatar>{{person.titleCase}}</div>
+        <!-- <img class="linkedin" matTooltip={{person?.linkedin}} matTooltipPosition="above" mat-card-avatar src="https://logo.clearbit.com/linkedin.com" /> -->
+        <!-- <div class="numberCircle" mat-card-avatar>{{company.score}}</div> -->
+        <mat-card-title class="text-oneline">{{person.name}}</mat-card-title>
+        <mat-card-subtitle><span>{{person?.designation}}</span></mat-card-subtitle>
+        <mat-card-subtitle><span>{{person?.location}}</span></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div style="padding-left: 60px; padding-top: 10px; padding-right: 10px; padding-bottom: 10px">
+            <div *ngIf="person?.company != null">
+                <mat-icon aria-hidden="false" aria-label="business" fontIcon="business"></mat-icon>
+                <span class="aligned-with-icon">{{person?.company}}</span>
+            </div>
+            <!-- <div *ngIf="person?.linkedin != null">
                     <mat-icon aria-hidden="false" aria-label="website" fontIcon="website"></mat-icon>
                     <span matTooltip={{person?.linkedin}} matTooltipPosition="above" class="aligned-with-icon">{{person?.linkedin}}</span>
                 </div> -->
-            </div>
-        </mat-card-content>
-    </mat-card>
-    <button class="leftRs" *ngIf="viewPersons.length > 3" [disabled]="rightPersonActive" (click)="viewNextPersonCards()">&#9660;</button>
+        </div>
+    </mat-card-content>
+</mat-card>
+<div style="display: flex; align-items: center; flex-direction: column">
+    <button class="leftRs" [disabled]="rightPersonActive" (click)="viewNextPersonCards()">&#9660;</button>
 </div>

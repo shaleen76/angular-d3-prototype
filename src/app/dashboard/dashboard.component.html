@@ -1,0 +1,14 @@
+<div class="box">
+    <div fxLayout="column" fxLayoutAlign="center center"  fxFlex class="center-me" fxFlexAlign="stretch">
+        <app-company-profile></app-company-profile>
+    </div>
+<div class="box">
+    <div fxLayout="column" fxLayoutAlign="center center"  fxFlex class="center-me" fxFlexAlign="stretch">
+        <app-person-profile *ngIf="viewPerson"></app-person-profile>
+    </div>
+</div>
+<div class="box">
+    <div fxLayout="column" fxLayoutAlign="center center"  fxFlex class="center-me" fxFlexAlign="stretch">
+        <app-connection-graph *ngIf="viewConnection"></app-connection-graph>
+    </div>
+</div>

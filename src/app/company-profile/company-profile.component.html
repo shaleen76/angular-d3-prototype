@@ -1,5 +1,8 @@
-<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px" style="align-items: left; justify-content: center;" fxFlexAlign="stretch">
-    <button class="leftRs" [disabled]="leftActive" (click)="viewPrevCards()">&#9650;</button>
+    <div style="display: flex; align-items: center; flex-direction: column">
+        <div style="font-weight: bold; font-size: 20px;">AI Lead</div>
+        <button class="leftRs" [disabled]="leftActive" (click)="viewPrevCards()">&#9650;</button>
+    </div>
+    
     <mat-card class="company-card" (click)="showPersonProfile(company)" *ngFor="let company of viewCompanies;" [class.active-company]="company?.index === selectedIndex">
         <mat-card-header>
             <div class="numberCircle" mat-card-avatar>{{company.score}}</div>
@@ -27,5 +30,6 @@
             </div>
         </mat-card-content>
     </mat-card>
-    <button class="leftRs" [disabled]="rightActive" (click)="viewNextCards()">&#9660;</button>
-</div>
+    <div style="display: flex; align-items: center; flex-direction: column">
+        <button class="leftRs" [disabled]="rightActive" (click)="viewNextCards()">&#9660;</button>
+    </div>

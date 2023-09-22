@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { Person } from './models/person';
-import { PersonService } from './services/person-service';
-import { ConnectionService } from './services/connection-service';
-import { Connection } from './models/connection';
-import { PersonNode } from './models/personNode';
+import { Person } from './../models/person';
+import { PersonService } from './../services/person-service';
+import { ConnectionService } from './../services/connection-service';
+import { Connection } from './../models/connection';
+import { PersonNode } from './../models/personNode';
 
 @Injectable({
     providedIn: 'root'
 })
-export class AppService {
+export class DashboardService {
 
     public showPersonComponent: BehaviorSubject<boolean> = new BehaviorSubject(false);
     public showConnectionComponent: BehaviorSubject<boolean> = new BehaviorSubject(false);
